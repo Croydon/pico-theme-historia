@@ -10,6 +10,7 @@ Download the story folder, upload it in the themes folder of your pico installat
 For Pico CMS >= 2.0 add to config/config.yml
 ```sh
  theme: historia
+ footnote: &copy; Cr0ydon
 ```
 
 ### Home Page & Post Page
