@@ -9,12 +9,12 @@
   	<!-- Facebook and Twitter integration -->
 	<meta property="og:title" content="{{ meta.title }}"/>
 	<meta property="og:image" content="{{ meta.image }}"/>
-	<meta property="og:url" content="{{ current_page.url }}"/>
+	<meta property="og:url" content="{{ current_page.url }}/"/>
 	<meta property="og:site_name" content="{{ site_title }}"/>
 	<meta property="og:description" content="{{ meta.description|striptags }}"/>
 	<meta name="twitter:title" content="{{ meta.title }}" />
 	<meta name="twitter:image" content="{{ meta.image }}" />
-	<meta name="twitter:url" content="{{ current_page.url }}" />
+	<meta name="twitter:url" content="{{ current_page.url }}/" />
 	<meta name="twitter:card" content="summary_large_image" />
 
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet">
@@ -66,7 +66,7 @@
 		<div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url({{ prev_page.meta.image }})">
 			<div class="overlay"></div>
 
-			<a class="copy" href="{{ prev_page.url }}">
+			<a class="copy" href="{{ prev_page.url }}/">
 				<div class="display-t">
 					<div class="display-tc">
 						<div>
@@ -81,7 +81,7 @@
 {% if next_page.meta.template == "single" %}
 		<div class="fh5co-cover next fh5co-cover-sm" style="background-image: url({{ next_page.meta.image }})">
 			<div class="overlay"></div>
-			<a class="copy" href="{{ next_page.url }}">
+			<a class="copy" href="{{ next_page.url }}/">
 				<div class="display-t">
 					<div class="display-tc">
 						<div>

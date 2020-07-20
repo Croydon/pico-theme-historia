@@ -54,10 +54,10 @@
 {% for page in pages|sort_by("time")|reverse %}
 {% if page.meta.template == "single" %}
 				<div class="fh5co-entry padding">
-					<!--<a href="{{ page.url }}" class="arrow"><i class="icon-arrow-right"></i></a>-->
+					<!--<a href="{{ page.url }}/" class="arrow"><i class="icon-arrow-right"></i></a>-->
 					<div>
 						<span class="fh5co-post-date">{{ page.date }}</span>
-						<h2><a href="{{ page.url }}">{{ page.title }}</a></h2>
+						<h2><a href="{{ page.url }}/">{{ page.title }}</a></h2>
 						<p>{{ page.excerpt }}</p>
 					</div>
 				</div>
