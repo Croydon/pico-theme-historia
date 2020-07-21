@@ -86,6 +86,14 @@
 				</div>
 			</a>
 		</div>
+{% else %}
+		<div class="fh5co-cover prev fh5co-cover-sm">
+			<div class="overlay"></div>
+			<span class="copy">
+				<div class="display-t">
+				</div>
+			</span>
+		</div>
 {% endif %}
 {% if next_page.meta.template == "single" %}
 		<div class="fh5co-cover next fh5co-cover-sm" style="background-image: url({{ next_page.meta.image }})">
@@ -101,8 +109,16 @@
 				</div>
 			</a>
 		</div>
-	</div>
+{% else %}
+		<div class="fh5co-cover prev fh5co-cover-sm">
+			<div class="overlay"></div>
+			<span class="copy">
+				<div class="display-t">
+				</div>
+			</span>
+		</div>
 {% endif %}
+	</div>
 	<footer>
 		<div>
 			{{ config.footnote }} | Design based on <a href="https://demos.freehtml5.co/story/" target="_blank">FreeHTML5.co/story</a>. Pico port original developed by <a href="https://besrourms.github.io" target="_blank">Mohamed Safouan Besrour</a>.
