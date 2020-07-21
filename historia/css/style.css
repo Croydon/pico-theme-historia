@@ -377,17 +377,14 @@ h1, h2, h3, h4, h5, h6, figure {
   list-style: none;
 }
 #fh5co-aside nav ul li a {
-  font-size: 14px;
+  font-size: 24px;
   text-transform: uppercase;
   position: relative;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   display: block;
   text-align: center;
-  line-height: 30px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
+  line-height: 40px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
 }
