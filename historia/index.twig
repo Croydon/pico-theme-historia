@@ -60,7 +60,7 @@
 		</div>
 		<div id="fh5co-main-content">
 			<div class="fh5co-post">
-{% for page in pages|reverse %}
+{% for page in pages|reverse if not page.hidden %}
 {% if page.meta.template == "single" %}
 				<div class="fh5co-entry padding">
 					<!--<a href="{{ page.url }}/" class="arrow"><i class="icon-arrow-right"></i></a>-->

@@ -71,7 +71,7 @@
 	</div>
 
 	<div class="fh5co-navigation">
-{% if prev_page.meta.template == "single" %}
+{% if prev_page.meta.template == "single" and not prev_page.hidden %}
 		<div class="fh5co-cover prev fh5co-cover-sm" style="background-image: url({{ prev_page.meta.image }})">
 			<div class="overlay"></div>
 
@@ -95,7 +95,7 @@
 			</span>
 		</div>
 {% endif %}
-{% if next_page.meta.template == "single" %}
+{% if next_page.meta.template == "single" and not next_page.hidden %}
 		<div class="fh5co-cover next fh5co-cover-sm" style="background-image: url({{ next_page.meta.image }})">
 			<div class="overlay"></div>
 			<a class="copy" href="{{ next_page.url }}/">
