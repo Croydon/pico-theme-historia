@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>{{ meta.title }}</title>
+		<link>{{ base_url }}</link>
+		<description>{{ meta.description }}</description>
+		<atom:link href="{{ page.url }}" rel="self" type="application/rss+xml" />
+        {% for page in pages|reverse if not page.hidden and page.meta.template == "single" and page.date %}
+        <item>
+            <title>{{ page.title }}</title>
+            <description><![CDATA[{{ page.description }}]]></description>
+            <link>{{ page.url }}/</link>
+            <pubDate>{{ page.date|date("D, d M Y H:i:s O") }}</pubDate>
+            <guid>{{ page.url }}/</guid>
+        </item>
+		{% endfor %}
+	</channel>
+</rss>
