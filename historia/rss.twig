@@ -4,7 +4,7 @@
 		<title>{{ meta.title }}</title>
 		<link>{{ base_url }}</link>
 		<description>{{ meta.description }}</description>
-		<atom:link href="{{ page.url }}" rel="self" type="application/rss+xml" />
+		<atom:link href="{{ current_page.url }}" rel="self" type="application/rss+xml" />
         {% for page in pages|reverse if not page.hidden and page.meta.template == "single" and page.date %}
         <item>
             <title>{{ page.title }}</title>
