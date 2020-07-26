@@ -10,7 +10,7 @@
             <title>{{ page.title }}</title>
             <description><![CDATA[{{ page.description }}]]></description>
             <link>{{ page.url }}/</link>
-            <pubDate>{{ page.date|date("D, d M Y H:i:s O") }}</pubDate>
+            <pubDate>{{ page.date|date("r") }}</pubDate>
             <guid>{{ page.url }}/</guid>
         </item>
 		{% endfor %}
