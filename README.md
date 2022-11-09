@@ -5,9 +5,7 @@ A simple & clean, Bootstrap blog theme for Pico.
 
 ## Installation
 
-Download the story folder, upload it in the themes folder of your pico installation and change the following setting within your config.php:
-
-For Pico CMS >= 2.0 add to config/config.yml
+Download the `historia` folder, upload it in the themes folder of your Pico installation and change the following setting within your `config/config.yml`:
 
 ```sh
  theme: historia
