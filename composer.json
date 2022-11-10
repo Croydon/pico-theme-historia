@@ -1,0 +1,22 @@
+{
+    "name": "croydon/pico-theme-historia",
+    "type": "pico-theme",
+    "description": "Pico is a flat file CMS, this means there is no administration backend and database to deal with. You simply create .md files in the \"content\" folder and that becomes a page.",
+    "keywords": ["pico", "picocms", "pico-cms", "thema", "blog", "historia"],
+    "homepage": "https://github.com/croydon/pico-theme-historia",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Contributors",
+            "homepage": "https://github.com/croydon/pico-theme-historia/graphs/contributors"
+        }
+    ],
+    "support": {
+        "docs": "https://github.com/croydon/pico-theme-historia",
+        "issues": "https://github.com/croydon/pico-theme-historia/issues",
+        "source": "https://github.com/croydon/pico-theme-historia"
+    },
+    "extra": {
+        "installer-name": "historia"
+    }
+}
