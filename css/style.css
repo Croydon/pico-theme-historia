@@ -27,6 +27,22 @@
   }
 }
 
+.historia-loader {
+  position: fixed;
+  top: -100%;
+  right: -100%;
+  left: -100%;
+  bottom: -100%;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+  z-index: 9999;
+  border: 10px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 10px solid #FC5185;
+  animation: loader 1s linear infinite;
+}
+
 /* End of new section */
 
 /* =======================================================
@@ -814,22 +830,6 @@ footer {
 
 .row-pb-sm {
   padding-bottom: 2em !important;
-}
-
-.fh5co-loader {
-  position: fixed;
-  top: -100%;
-  right: -100%;
-  left: -100%;
-  bottom: -100%;
-  margin: auto;
-  width: 80px;
-  height: 80px;
-  z-index: 9999;
-  border: 10px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 10px solid #FC5185;
-  animation: loader 1s linear infinite;
 }
 
 .js .animate-box {
