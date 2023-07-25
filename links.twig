@@ -32,6 +32,9 @@
 	<link rel="stylesheet" href="{{ theme_url }}/css/bootstrap.css">
 	<link rel="stylesheet" href="{{ theme_url }}/css/bootstrap-theme.css">
 	<link rel="stylesheet" href="{{ theme_url }}/css/bootstrap-icons.css">
+	<!-- Link Tree styles  -->
+	<link rel="stylesheet" href="{{ theme_url }}/css/skeleton-auto.css">
+	<link rel="stylesheet" href="{{ theme_url }}/css/brands.css">
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="{{ theme_url }}/css/style.css">
 
@@ -47,7 +50,7 @@
 				<ul>
 					<li><a href="{{ base_url }}"><i class="bi bi-house-door-fill" aria-label="Homepage"></i></a></li>
 				{% if config.link_tree %}
-					<li><a href="{{ base_url }}/links"><i class="bi bi-person-lines-fill" aria-label="Links"></i></a></li>
+					<li><a href="#"><i class="bi bi-person-lines-fill" aria-label="Links"></i></a></li>
 				{% endif %}
 				</ul>
 			</nav>
@@ -56,25 +59,26 @@
 			</div>
 		</div>
 		<div id="fh5co-main-content">
-			<div class="fh5co-post">
-{% for page in pages|reverse if not page.hidden %}
-{% if page.meta.template == "single" %}
-				<div class="fh5co-entry padding">
-					<!--<a href="{{ page.url }}/" class="arrow"><i class="bi bi-arrow-right"></i></a>-->
-					<div>
-						<span class="fh5co-post-date">{{ page.date_formatted }}</span>
-						<h2><a href="{{ page.url }}/">{{ page.title }}</a></h2>
-						<p>{{ page.excerpt }}</p>
-					</div>
-				</div>
-{% endif %}
-{% endfor %}
-				<footer>
-					<div>
-					{{ config.footnote }} | Design elements based on <a href="https://demos.freehtml5.co/story/" target="_blank">FreeHTML5.co/story</a> and <a href="https://besrourms.github.io" target="_blank">Mohamed Safouan Besrour</a>'s work.
-					</div>
-				</footer>
-			</div>
+            <div class="container">
+                <div class="row">
+                    <div class="column" style="margin-top: 10%">
+
+                        <!-- Title -->
+                        <h1 role="heading">{{ meta.headline }}</h1>
+
+                    {% for brand, values in config.link_tree %}
+                        <a class="button button-{{ brand }}" href="{{ values.url }}" target="_blank" rel="noopener" role="button"><i class="bi bi-{% if values.alt_icon %}{{ values.alt_icon }}{% else %}{{ brand }}{% endif %}"></i> {{ values.display }}</a><br>
+                    {% endfor %}
+
+                        <br>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div>
+                {{ config.footnote }} | Design elements based on <a href="https://demos.freehtml5.co/story/" target="_blank">FreeHTML5.co/story</a>, <a href="https://besrourms.github.io" target="_blank">Mohamed Safouan Besrour</a>'s work and <a href="https://littlelink.io" target="_blank">LittleLink</a>.
+                </div>
+            </footer>
 		</div>
 	</div>
 
