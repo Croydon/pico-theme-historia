@@ -67,7 +67,7 @@
                         <h1 role="heading">{{ meta.headline }}</h1>
 
                     {% for brand, values in config.link_tree %}
-                        <a class="button button-{{ brand }}" href="{{ values.url }}" target="_blank" rel="noopener" role="button"><i class="bi bi-{% if values.alt_icon %}{{ values.alt_icon }}{% else %}{{ brand }}{% endif %}"></i> {{ values.display }}</a><br>
+                        <a class="button button-{% if values.alt_button %}{{ values.alt_button }}{% else %}{{ brand }}{% endif %}" href="{{ values.url }}" target="_blank" rel="noopener" role="button"><i class="bi bi-{% if values.alt_icon %}{{ values.alt_icon }}{% else %}{{ brand }}{% endif %}"></i> {{ values.display }}</a><br>
                     {% endfor %}
 
                         <br>
